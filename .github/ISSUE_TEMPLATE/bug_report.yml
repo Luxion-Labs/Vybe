@@ -1,82 +1,29 @@
 name: Bug Report
-description: Report a bug or unexpected behavior
-title: "[Bug]: "
-labels: ["bug", "triage"]
+description: File an actionable bug report
+title: "fix: "
+labels: ["bug"]
 body:
   - type: markdown
     attributes:
-      value: |
-        Thanks for taking the time to report a bug! Please fill out the form below.
-
+      value: Thank you for reporting an issue. Please provide details below.
   - type: textarea
     id: description
     attributes:
-      label: Bug Description
-      description: A clear and concise description of what the bug is.
-      placeholder: Tell us what you see!
+      label: Description
+      description: What happened? What did you expect to happen?
     validations:
       required: true
-
   - type: textarea
     id: reproduction
     attributes:
       label: Steps to Reproduce
-      description: Steps to reproduce the behavior
-      placeholder: |
-        1. Go to '...'
-        2. Click on '...'
-        3. Scroll down to '...'
-        4. See error
+      description: Exact commands or steps to trigger the bug.
     validations:
       required: true
-
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected Behavior
-      description: What did you expect to happen?
-      placeholder: Tell us what should happen
-    validations:
-      required: true
-
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual Behavior
-      description: What actually happened?
-      placeholder: Tell us what actually happened
-    validations:
-      required: true
-
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant Logs
-      description: Please copy and paste any relevant log output
-      render: shell
-
-  - type: dropdown
+  - type: input
     id: environment
     attributes:
       label: Environment
-      description: Where are you running Vybe?
-      options:
-        - Local development
-        - Docker Compose
-        - Production
-        - Other
+      description: OS version, runtime version, browser if applicable.
     validations:
-      required: true
-
-  - type: input
-    id: version
-    attributes:
-      label: Version
-      description: What version of Vybe are you running?
-      placeholder: "v0.1.0"
-
-  - type: textarea
-    id: additional
-    attributes:
-      label: Additional Context
-      description: Add any other context about the problem here
+      required: false
